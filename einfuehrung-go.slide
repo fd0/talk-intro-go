@@ -1,0 +1,135 @@
+# vim:spl=de_20,en spell
+Die Programmiersprache Go
+Von Taschenratten und Typen
+28 Jan 2015
+
+Alexander Neumann (fd0)
+alexander@bumpern.de
+https://github.com/fd0
+@nerdlicher
+
+* 
+
+.image gophericons/svg/0.svg
+
+* Über mich
+
+- Go seit 2012
+- Projekt: restic (Backupprogramm, schnell, sicher, effizient)
+- https://restic.github.io
+
+* Entwicklungsgeschichte
+
+- 11/2009: Initiale Vorstellung
+- 03/2012: Go 1.0
+- [...]
+- 08/2015: Go 1.5
+- 02/2016: Go 1.6 (noch nicht veröffentlicht)
+
+- Go Spezifikation: https://golang.org/ref/spec
+- Zwei Implementierungen: Go und gccgo
+
+* Fundament
+
+- Statische Typisierung
+- Garbage Collection
+- Typsicherheit (type-safe)
+- Speichersicherheit (memory-safe)
+- Nebeläufigkeit (concurrency)
+- Kommunikation
+- Schnelles Kompilieren
+- "fun"
+
+* Designziele
+
+- Wenige, orthogonale Features
+- Wenige Keywords (Reguläre, konfliktfreie Grammatik)
+- Einfach zu parsen (Parser in der stdlib)
+- Typsicherheit
+- Keine Typenhierarchie, keine Vererbung
+
+* Grundlagen
+
+- Einfache, prägnante Syntax
+- Leichtgewichtiges Typsystem
+- Keine impliziten Umwandlungen von Typen (int -> int64)
+- Typenlose Konstanten
+- Strikte Trennung zwischen Interface und Implementierung
+- Implizite Interfaces
+- Keine Makefiles, Code enthält Information zum Kompilieren
+- Einfaches Kompilieren für andere Architekturen
+
+* Tooling
+- Kompilieren mit `go build`
+- Direkt ausführen mit `go run`
+- Sourcecode formatieren: `gofmt`
+
+* Achtung
+
+Suchen nach "golang", nicht "go"
+
+.image gophericons/svg/8.svg
+
+* Runtime
+
+- Kümmert sich um alles
+- Stack
+- Goroutines, System-Threads
+- Kommunikation (Channel)
+- Eingebaute Datentypen (Slices, Maps)
+
+* Standardbibliothek
+
+- Enthält schon sehr viel
+- HTTP-Server, HTTP-Client
+- Crypto, Hashfunktionen
+- Testing-Framework
+- HTML, Templates
+
+* Packages
+
+- Go-Code ist aufgeteilt in Pakete
+- Ein Paket ist ein Verzeichnis mit Code
+- Export durch Großbuchstaben
+- Explizite Dependencies
+
+* Basics
+
+- Ähnlich zu C, nur Typ/Name vertauscht
+- Nur noch ein Schleifenkonstrukt
+- Keine Pointer-Arithmetik
+
+.image gophericons/svg/31.svg 400 _
+
+* Hello World!
+
+.play demos/hello-world/main.go
+
+Ausführen:
+
+  $ go run main.go
+  Hello World
+
+Kompilieren:
+
+  $ go build -o hello main.go
+  $ ./hello
+  Hello World
+
+* Variablen und Konstanten
+
+.play demos/var-const/main.go
+
+* Automatische Typableitung
+
+.play demos/var-declaration/main.go
+
+* Funktionen
+
+.play demos/funcs/main.go
+
+* Type und Struct
+
+.play demos/type-struct1/main.go
+
+#vim:ft=votl noet ts=4 nolist

@@ -1,0 +1,139 @@
+Introduction to Go
+
+Objective
+	Should be able to write Go at the end of the talk
+	Hints for further studies
+
+About Me
+	Go programming, since 2012
+	restic, backup program in Go (since 2014)
+
+History
+	2009
+
+	concurrent
+	garbage collected
+
+	spec, two implementations
+
+Foundation
+	compile fast
+	"fun"
+
+	type-safe, memory-safe
+	concurrency, communication
+	garbage-collected
+
+design principles
+	few orthogonal features
+	few keywords (regular grammar, conflict-free)
+	easy to parse (stdlib)
+	type safety
+	no type hierarchy, no inheritance
+
+fundamentals
+	clean, concise syntax
+	lightweight type system
+	no implicit conversions
+	untyped unsized constants
+	strict separator interface/implementation
+	no makefiles
+	easy cross-compilation
+
+	Google: "Golang", not "Go"
+
+run-time
+	garbage collection
+	strings, maps, communication channels
+	concurrency, goroutines
+
+stdlib
+	http client, server
+	math
+	hashes, crypto
+	testing
+	HTML, templates
+
+package model
+	explicit dependencies
+	-> faster builds
+	GOPATH
+
+basics
+	syntax, similar to C, type/name exchanged
+	var, const, :=
+	semicolon
+	type, struct
+	if, for, braces
+	main, init
+	package, import
+	multi-assign, multi-return
+	arrays, slices, maps
+	range
+	call-by-value, call-by-reference
+	methoden
+	reflection (JSON?)
+	export, upper-case first letter
+	interface, empty interface
+	channels
+	select
+	closures
+
+documentation and testing
+	gofmt
+	godoc
+	go test
+	examples
+
+tooling
+	gocode
+	golint
+	go vet
+	gorename
+
+Books
+	Alan A. A. Donovan · Brian W. Kernighan - The Go Programming Language
+		http://www.gopl.io/
+	Brian Ketelsen, Erik St. Martin, William Kennedy - Go in Action
+		http://goinactionbook.com/
+
+	Caleb Doxsey - An Introduction to Programming in Go [free]
+		https://www.golang-book.com/books/intro
+		https://www.golang-book.com/public/pdf/gobook.0.pdf
+
+
+Videos
+	rob pike - google tech talk "The Go Programming Language"- https://youtu.be/rKnDgT73v8s
+	Go Programming in one Video -  https://www.youtube.com/watch?v=CF9S4QZuV30
+		Intro : 00:56
+		Variables : 2:30
+		Data Types : 2:43
+		Arithmetic : 5:20
+		Constants : 5:45
+		Strings : 6:15 & 38:32
+		Booleans : 7:25
+		Printf : 7:36
+		Logical Operators : 9:23
+		For Loops : 10:14
+		Relational Operators : 11:08
+		If : 12:08
+		Switch : 13:10
+		Arrays : 13:45
+		Slice : 15:22
+		Maps : 18:29
+		Functions : 20:08
+		Closures : 24:37
+		Recursion : 25:25
+		Defer : 27:39
+		Recover : 28:55
+		Pointers : 31:00
+		Structs : 33:43
+		Interfaces : 35:47
+		File I/O : 41:29
+		Casting : 43:10
+		Create Web Server : 44:22
+		Go Routines : 46:17
+		Channels : 48:10
+
+
+vim:ft=votl noet ts=4 nolist
