@@ -61,13 +61,13 @@ package model
 
 basics
 	syntax, similar to C, type/name exchanged
+	if, for, braces
 	var, const, :=
 	semicolon
 	type, struct
-	if, for, braces
+	multi-return, errors
 	main, init
 	package, import
-	multi-assign, multi-return
 	arrays, slices, maps
 	range
 	call-by-value, call-by-reference
