@@ -19,12 +19,12 @@ func print(worker, count int, ch chan time.Duration, done <-chan struct{}) {
 
 	for count > 0 {
 		fmt.Printf("[worker %3d] %3d bottles of mate on the wall\n", worker, count)
-		time.Sleep(time.Duration(count) * 50 * time.Millisecond)
+		timeout := time.After(time.Duration(count) * 50 * time.Millisecond)
 		count--
 		select {
 		case <-done:
 			return
-		default:
+		case <- timeout:
 		}
 	}
 }

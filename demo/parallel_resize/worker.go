@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"path/filepath"
 	"sync"
 )
@@ -10,7 +11,10 @@ func resizeWorker(wg *sync.WaitGroup, outdir string, input <-chan string, output
 
 	for infile := range input {
 		outfile := filepath.Join(outdir, filepath.Base(infile))
-		resize(1024, 768, infile, outfile)
+		err := resize(1024, 768, infile, outfile)
+		if err != nil {
+			fmt.Printf("error! %v\n", err)
+		}
 		output <- outfile
 	}
 }
