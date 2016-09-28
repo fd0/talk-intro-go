@@ -9,7 +9,7 @@ https://github.com/fd0
 
 * 
 
-.image gophericons/svg/0.svg _ 450
+.image https://raw.githubusercontent.com/shalakhin/gophericons/master/svg/0.svg _ 450
 .caption _Gopher_ by [[http://www.reneefrench.com][Renée French]] ([[http://creativecommons.org/licenses/by/3.0/][CC BY 3.0]])
 
 * Über mich
@@ -75,7 +75,7 @@ https://github.com/fd0
 
 Suchen nach "golang", nicht "go"
 
-.image gophericons/svg/8.svg _ 400
+.image https://raw.githubusercontent.com/shalakhin/gophericons/master/svg/8.svg _ 400
 .caption _gophericons_ by [[https://www.facebook.com/olga.shalakhina][Olga Shalakhina]] ([[http://creativecommons.org/licenses/by/3.0/][CC BY 3.0]])
 
 * Runtime
@@ -105,7 +105,7 @@ Suchen nach "golang", nicht "go"
 - Export durch Großbuchstaben
 - Explizite Dependencies
 
-.image gophericons/svg/15.svg 360 _
+.image https://raw.githubusercontent.com/shalakhin/gophericons/master/svg/15.svg 360 _
 
 * Basics
 
@@ -226,7 +226,7 @@ Alternativ:
 - Maps ("Dictionary", "Hash")
 - Channel
 
-.image gophericons/svg/11.svg _ 300
+.image https://raw.githubusercontent.com/shalakhin/gophericons/master/svg/11.svg _ 300
 
 * Native Datenstrukturen: Array
 
@@ -248,7 +248,7 @@ Achtung: Call-by-reference (für unterliegende Daten)
 
 .play vortragsdemos/concurrency/main.go /START OMIT/,/END OMIT/
 
-.image gophericons/svg/2.svg _ 300
+.image https://raw.githubusercontent.com/shalakhin/gophericons/master/svg/2.svg _ 300
 
 Wird eine Funktion mit dem Keyword `go` gestartet, läuft sie in einer eigenen Goroutine.
 
