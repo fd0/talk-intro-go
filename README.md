@@ -1,9 +1,5 @@
-Folien und Code vom Vortrag
+Folien und Code verschiedener Einführungsvorträge zu Go:
 
-"Von Taschenratten und Typen - Die Programmiersprache Go"
-
-Gehalten am 10. Februar 2016 im [CCCAC](https://ccc.ac)
-
-Video: https://media.ccc.de/v/cccac-taschenratten
-
-Folien ansehen: https://go-talks.appspot.com/github.com/fd0/talk-intro-go/einfuehrung-go.slide
+ * 10.02.2016, [CCCAC](https://ccc.ac): "Von Taschenratten und Typen - Die Programmiersprache Go"
+   [Video](https://media.ccc.de/v/cccac-taschenratten)
+   [Folien](https://go-talks.appspot.com/github.com/fd0/talk-intro-go/CCCAC/einfuehrung-go.slide)
