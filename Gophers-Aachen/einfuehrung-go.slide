@@ -106,7 +106,7 @@ Suchen nach "golang", nicht "go"
 
 * Hello World!
 
-.play vortragsdemos/hello-world/main.go
+.play -edit vortragsdemos/hello-world/main.go
 
 Ausführen:
 
@@ -121,45 +121,45 @@ Kompilieren:
 
 * Klammern, if, for
 
-.play vortragsdemos/if-for/main.go /^func main/,/^}/
+.play -edit vortragsdemos/if-for/main.go /^func main/,/^}/
 
 * Doppelzuweisung, Semikolons
 
-.play vortragsdemos/semicolons-double-assign/main.go
+.play -edit vortragsdemos/semicolons-double-assign/main.go
 
 * Variablen und Konstanten
 
-.play vortragsdemos/var-const/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/var-const/main.go /START OMIT/,/END OMIT/
 
-.play vortragsdemos/unsized-constants/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/unsized-constants/main.go /START OMIT/,/END OMIT/
 
 * Automatische Typableitung
 
-.play vortragsdemos/var-declaration/main.go
+.play -edit vortragsdemos/var-declaration/main.go
 
 * Funktionen
 
-.play vortragsdemos/funcs/main.go
+.play -edit vortragsdemos/funcs/main.go
 
 * main(), init()
 
-.play vortragsdemos/main-init/main.go
+.play -edit vortragsdemos/main-init/main.go
 
 * Mehrfachrückgabe, Fehler
 
-.play vortragsdemos/funcs2/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/funcs2/main.go /START OMIT/,/END OMIT/
 
 * Type und Struct
 
-.play vortragsdemos/type-struct1/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/type-struct1/main.go /START OMIT/,/END OMIT/
 
 * Methoden
 
-.play vortragsdemos/methods/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/methods/main.go /START OMIT/,/END OMIT/
 
 * Pointer
 
-.play vortragsdemos/pointer/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/pointer/main.go /START OMIT/,/END OMIT/
 
 * godoc
 
@@ -199,13 +199,13 @@ Alternativ:
 
 * Interfaces #2
 
-.play vortragsdemos/interfaces/main.go /START Color OMIT/,/END Color OMIT/
+.play -edit vortragsdemos/interfaces/main.go /START Color OMIT/,/END Color OMIT/
 
-.play vortragsdemos/interfaces/main.go /START main OMIT/,/END main OMIT/
+.play -edit vortragsdemos/interfaces/main.go /START main OMIT/,/END main OMIT/
 
 * Closures
 
-.play vortragsdemos/closures/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/closures/main.go /START OMIT/,/END OMIT/
 
 * Native Datenstrukturen
 
@@ -218,23 +218,23 @@ Alternativ:
 
 * Native Datenstrukturen: Array
 
-.play vortragsdemos/arrays/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/arrays/main.go /START OMIT/,/END OMIT/
 
 Eher selten verwendet
 
 * Native Datenstrukturen: Slice
 
-.play vortragsdemos/slices/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/slices/main.go /START OMIT/,/END OMIT/
 
 Achtung: Call-by-reference (für unterliegende Daten)
 
 * Native Datenstrukturen: Map
 
-.play vortragsdemos/maps/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/maps/main.go /START OMIT/,/END OMIT/
 
 * Nebenläufigkeit in Go
 
-.play vortragsdemos/concurrency/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/concurrency/main.go /START OMIT/,/END OMIT/
 
 .image https://raw.githubusercontent.com/shalakhin/gophericons/master/png/2.png _ 300
 
@@ -242,19 +242,19 @@ Wird eine Funktion mit dem Keyword `go` gestartet, läuft sie in einer eigenen G
 
 * Native Datenstrukturen: Channel
 
-.play vortragsdemos/channels/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/channels/main.go /START OMIT/,/END OMIT/
 
 * Nebenläufigkeit #2
 
-.play vortragsdemos/concurrency2/main.go /START OMIT/,/END OMIT/
+.play -edit vortragsdemos/concurrency2/main.go /START OMIT/,/END OMIT/
 
 * Nebenläufigkeit #3
 
-.play vortragsdemos/concurrency3/main.go /START main OMIT/,/END main OMIT/
+.play -edit vortragsdemos/concurrency3/main.go /START main OMIT/,/END main OMIT/
 
 * Nebenläufigkeit #3
 
-.play vortragsdemos/concurrency3/main.go /START worker OMIT/,/END worker OMIT/
+.play -edit vortragsdemos/concurrency3/main.go /START worker OMIT/,/END worker OMIT/
 
 * Demo
 
