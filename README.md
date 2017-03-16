@@ -1,5 +1,8 @@
 Folien und Code verschiedener Einführungsvorträge zu Go:
 
+ * 17.03.2017, [Gophers Aachen](https://meetup.com/gophers-aachen): "$GOPATH für Einsteiger"
+   [Folien](https://go-talks.appspot.com/github.com/fd0/talk-intro-go/GOPATH/gopath.slide)
+
  * 16.02.2017, [Gophers Aachen](https://meetup.com/gophers-aachen): "Kurzeinführung Go"
    [Folien](https://go-talks.appspot.com/github.com/fd0/talk-intro-go/Gophers-Aachen/einfuehrung-go.slide)
 
