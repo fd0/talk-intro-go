@@ -1,0 +1,156 @@
+# vim:spl=de_20,en spell
+$GOPATH für Einsteiger
+17 Mar 2017
+
+Alexander Neumann (fd0)
+alexander@bumpern.de
+https://github.com/fd0/talk-intro-go
+
+* Go Packages
+
+- Package = Verzeichnis mit Code
+- Dateien in einem Verzeichnis haben das gleiche Package
+- Funktion `main()` muss in Package `main` sein
+
+: Go-Code ist aufgeteilt in Packages
+: Package ist ein Verzeichnis mit Code
+: Verzeichnis-Name vs. Package Name
+: Gleiches Package für alle Dateien
+: main hat Sonderfunktion
+
+* Beispiel 1
+
+`a/main.go`:
+.play -edit demos/main/main.go
+
+: package main - Sonderfall -> main()
+: import fmt - Importieren von anderen Packages
+: Zugriff auf exportierte Symbole per fmt.
+
+* Beispiel 2
+
+`a/main.go`:
+
+    package main
+
+    import "fmt"
+
+    func main() {
+        fmt.Println("Hello Aachen")
+    }
+
+`a/foo.go`:
+
+    package foo
+
+    import "fmt"
+
+    func Xxx() {
+        fmt.Println("xxx")
+    }
+
+: Packages main und foo
+
+* Kompilieren:
+
+    $ go build
+    can't load package: package .: found packages foo (foo.go) and main (main.go) in /a
+
+: Verschiedene Packages im gleichen Verzeichnis -> Fehler
+
+* Verzeichnisname
+
+- Konvention: Package-Name = Verzeichnisname
+- Achtung: Nicht immer
+
+* Was ist $GOPATH?
+
+* Umgebung
+
+    $ go env
+    [...]
+    GOPATH="/home/fd0/go"
+    GOROOT="/usr/lib/go"
+    [...]
+
+- $GOPATH enthält den gesamten Go-Code
+- Vor Go 1.8: `$GOPATH` muss immer erst manuell gesetzt werden
+- Ab Go 1.8: Standard ist `$HOME/go`
+
+* Struktur
+
+    $ tree ~/go
+
+    /home/fd0/go
+    ├── pkg
+    │   └── linux_amd64
+    │       └── github.com
+    │           └── fd0
+    │               └── termstatus.a
+    ├── src
+    │   └── github.com
+    │       └── fd0
+    │           └── termstatus
+    │               ├── example
+    │               │   └── main.go
+    │               ├── status.go
+    │               ├── terminal_posix.go
+    │               ├── terminal_unix.go
+    │               └── terminal_windows.go
+    └── bin
+
+
+* Packages verwenden
+
+.image images/github-fatih-color.png _ 900
+
+* Installieren
+
+    $ go get github.com/fatih/color
+ 
+    $ ls -al ~/go/src/github.com/fatih/color
+    total 64
+    drwxr-xr-x 4 fd0 users  4096 Mär 16 20:11 .
+    drwxr-xr-x 3 fd0 users  4096 Mär 16 20:11 ..
+    -rw-r--r-- 1 fd0 users 14743 Mär 16 20:11 color.go
+    -rw-r--r-- 1 fd0 users  7010 Mär 16 20:11 color_test.go
+    -rw-r--r-- 1 fd0 users  4242 Mär 16 20:11 doc.go
+    drwxr-xr-x 8 fd0 users  4096 Mär 16 20:11 .git
+    -rw-r--r-- 1 fd0 users  1079 Mär 16 20:11 LICENSE.md
+    -rw-r--r-- 1 fd0 users  4691 Mär 16 20:11 README.md
+    -rw-r--r-- 1 fd0 users    33 Mär 16 20:11 .travis.yml
+    drwxr-xr-x 4 fd0 users  4096 Mär 16 20:11 vendor
+
+* Verwenden
+
+.play -edit demos/color/main.go
+
+.image images/color.png _ 350
+
+* Tests
+
+`~/go/src/github.com/pad/pad.go`:
+.code demos/pad/pad.go
+
+: Sonderfall: Tests
+: Da dürfen package foo und foo_test im gleichen Verzeichnis sein
+
+* 
+
+`~/go/src/github.com/pad/pad_test.go`:
+.code demos/pad/pad_test.go
+
+* 
+
+    $ go test -v
+    === RUN   TestLeft
+    --- PASS: TestLeft (0.00s)
+    PASS
+
+* 
+
+`~/go/src/github.com/pad/pad_right_test.go`:
+.code demos/pad/pad_right_test.go
+
+
+#vim:noet ts=4 nolist spell
